@@ -35,10 +35,10 @@ const Navbar = () => {
                         <Link to="/dashboard">Dashboard</Link>
                     </ul>
                 </div>
-                <Link className="text-xl btn btn-ghost">Coffee Book</Link>
+                <Link className="text-2xl ">COFFEE_BOOK</Link>
             </div>
             <div className="navbar-end">
-                <ul className="gap-8 px-1 menu menu-horizontal">
+                <ul className="items-center hidden gap-8 md:flex">
                     <Link to="/">Home</Link>
                     <Link to="/coffees">Coffees</Link>
                     <Link to="/dashboard">Dashboard</Link>
