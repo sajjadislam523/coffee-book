@@ -1,23 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 const Categories = ({ categories }) => {
     return (
         <div>
             <div role="tablist" className="tabs tabs-lifted">
                 {categories.map((category) => (
-                    <Link
+                    <NavLink
                         key={category.id}
                         to={`/category/${category.category}`}
                         role="tab"
-                        className="tab"
+                        className={({ isActive }) =>
+                            `tab text-2xl font-thin ${
+                                isActive ? "tab-active" : ""
+                            }`
+                        }
                     >
                         {category.category}
-                    </Link>
+                    </NavLink>
                 ))}
             </div>
         </div>
     );
+};
+
+Categories.propTypes = {
+    categories: PropTypes.array,
 };
 
 export default Categories;
